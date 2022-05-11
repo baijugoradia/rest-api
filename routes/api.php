@@ -42,10 +42,3 @@ Route::group(["prefix" => 'address'], function () {
     Route::put('/{id}', [AddressController::class, 'update']);
     Route::delete('/{id}', [AddressController::class, 'delete']);
 });
-
-
-//Route::post('employee',[EmployeeController::class,'store']);
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});

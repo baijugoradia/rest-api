@@ -16,8 +16,7 @@ class Employee extends Model
 
     public $table = 'employee';
     protected $primaryKey = 'employee_id';
-
-    protected $hidden = ['created_at','updated_at'];
+    protected $hidden = ['created_at', 'updated_at'];
 
 
     /**
@@ -28,6 +27,9 @@ class Employee extends Model
         return $this->hasMany(Contact::class, 'employee_id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function address()
     {
         return $this->hasMany(Address::class, 'employee_id');

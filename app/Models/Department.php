@@ -14,5 +14,5 @@ class Department extends Model
 
     protected $table = 'departments';
     protected $primaryKey = 'departments_id';
-    protected $hidden = ['created_at','updated_at'];
+    protected $hidden = ['created_at', 'updated_at'];
 }

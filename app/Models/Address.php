@@ -12,14 +12,15 @@ use App\Models\Employee;
 class Address extends Model
 {
     use HasFactory;
+
     protected $table = 'addresses';
     protected $primaryKey = 'addresses_id';
 
-    protected $hidden = ['created_at','updated_at','employee_id'];
+    protected $hidden = ['created_at', 'updated_at', 'employee_id'];
 
     public function employee()
     {
-        $this->belongsTo(Employee::class,'employee_id');
+        $this->belongsTo(Employee::class, 'employee_id');
     }
 
 }
